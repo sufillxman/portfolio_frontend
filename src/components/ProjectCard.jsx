@@ -43,7 +43,7 @@ const ProjectCard = ({ project }) => {
       <h3 className="mb-3 text-xl font-semibold text-white">{project.title}</h3>
       <p className="mb-5 text-slate-300 leading-7">{project.description}</p>
       <div className="mb-5 flex flex-wrap gap-2 text-xs text-slate-200/90">
-        {project.tech_stack.split(',').map((tech) => (
+        {project.tech_stack && project.tech_stack.split(',').map((tech) => (
           <span key={tech} className="rounded-full bg-slate-800/80 px-3 py-1 transition hover:bg-cyan-500/20 hover:text-cyan-300">
             {tech.trim()}
           </span>
